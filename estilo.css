@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+    background: url(img/8611.jpg);
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    display: inline-block;  /* faz o main ter o tamanho da imagem interna */
+    margin-top: 8%;
+    padding: 10px;
+    position: relative; /* faz os displays absolutos respeitarem o tamanho do elemento pai */
+}
+.pokedex {
+    width: 100%;
+    max-width: 840px;
+}
+.fundo {
+    position: absolute;
+    top: 33%;
+    left: 13%;
+    border: 3px solid #353434;
+    width: 30%;
+    height: 26%;
+    border-radius: 7px;
+}
+.fundo_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+.pokemon_img, .pokemon_img2 {
+    position: absolute;
+    left: 30%;
+    bottom: 45%;
+    transform: translate(-60%, 20%);
+    min-height: 30%;
+    z-index: 10;
+}
+.box {
+    width: 29%;
+    height: 10%;
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    right: 10.8%;
+    top: 37.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pokemon_data {
+    /* clamp ( val min, val desejável, val max ) */
+    font-size: clamp(8px, 5vw, 20px);
+}
+.pokemon_name {
+    color: #d2e0ed;
+    text-transform: capitalize;
+}
+.box2 {
+    position: absolute;
+    width: 18%;
+    height: 11.5%;
+    position: absolute;
+    font-weight: 600;
+    color: #f0f0f0;
+    right: 16.2%;
+    top: 52.3%;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #222;
+    text-transform: capitalize;
+    gap: 8%;
+}
+.form {
+    position: absolute;
+    width: 30%;
+    top: 67.8%;
+    left: 60%;
+}
+.input_search {
+    width: 100%;
+    padding: 4%;
+    outline: none;  /* retira a borda azul do texto selecionável */
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #727171, -5px 7px 0 #333;
+}
+.bottons {
+    position: absolute;
+    bottom: 14.5%;
+    left: 77%;
+    width: 30.2%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 5%;
+}
+.botton {
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: #fff;
+    background: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+}
+.botton:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 0.9rem;
+}
+.shiny {
+    position: absolute;
+    bottom: 13.2%;
+    left: 16%;
+    width: 15%;
+    height: 9%;
+    border: none;
+    background: #b078f0;
+    font-weight: 800;
+    color: #1e2829;
+    font-size: 1.3rem;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.shiny:active {
+    box-shadow: inset -4px 4px 0 #222;
+    font-size: 1.2rem;
+}
+.shiny::before {  /* efeito brilho botão */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.3s;
+}
+.shiny:active::before {
+    transform: skewX(45deg) translateX(-150px);
+}

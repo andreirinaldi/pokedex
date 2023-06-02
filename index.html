@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokédex</title>
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!-- Links -->
+    <link rel="icon" href="img/pokebola.png">
+    <link rel="stylesheet" href="estilo.css">
+    <!-- JS -->
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <img src="" alt="pokemon" class="pokemon_img">
+        <img src="" alt="pokemon" class="pokemon_img2">
+
+        <div class="box">
+            <h1 class="pokemon_data">
+                <span class="pokemon_number"></span> -
+                <span class="pokemon_name"></span>
+            </h1>
+        </div>
+
+        <form class="form">
+            <input type="search" class="input_search" placeholder="Name or Number" required>
+        </form>
+
+        <div class="bottons">
+            <button class="botton btn-prev">Prev &lt;</button>
+            <button class="botton btn-next">Next &gt;</button>
+        </div>
+        <div class="box2">
+            <p class="pokemon_type1"></p>
+            <p class="pokemon_type2"></p>
+        </div>
+
+        <img src="img/dexx.png" alt="dex" class="pokedex">
+        <div class="fundo">
+            <img src="img/grama.png" class="fundo_img">
+        </div>
+
+        <button class="shiny">SHINY</button>
+    </main>
+</body>
+
+</html>
