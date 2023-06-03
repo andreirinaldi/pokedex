@@ -10,14 +10,21 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 main {
-    display: inline-block;  /* faz o main ter o tamanho da imagem interna */
+    /* faz o main ter o tamanho da imagem interna */
+    display: inline-block;
     margin-top: 8%;
     padding: 10px;
-    position: relative; /* faz os displays absolutos respeitarem o tamanho do elemento pai */
+    /* faz os displays absolutos respeitarem o tamanho do elemento pai */
+    position: relative;
 }
 .pokedex {
     width: 100%;
     max-width: 840px;
+}
+.pokedex2 {
+    width: 100%;
+    max-width: 425px;
+    display: none;
 }
 .fundo {
     position: absolute;
@@ -34,7 +41,8 @@ main {
     object-fit: cover;
     border-radius: 7px;
 }
-.pokemon_img, .pokemon_img2 {
+.pokemon_img,
+.pokemon_img2 {
     position: absolute;
     left: 30%;
     bottom: 45%;
@@ -56,7 +64,7 @@ main {
 }
 .pokemon_data {
     /* clamp ( val min, val desejável, val max ) */
-    font-size: clamp(8px, 5vw, 20px);
+    font-size: clamp(8px, 4vw, 20px);
 }
 .pokemon_name {
     color: #d2e0ed;
@@ -66,7 +74,6 @@ main {
     position: absolute;
     width: 18%;
     height: 11.5%;
-    position: absolute;
     font-weight: 600;
     color: #f0f0f0;
     right: 16.2%;
@@ -88,7 +95,8 @@ main {
 .input_search {
     width: 100%;
     padding: 4%;
-    outline: none;  /* retira a borda azul do texto selecionável */
+    outline: none;
+    /* retira a borda azul do texto selecionável */
     border: 2px solid #333;
     border-radius: 5px;
     font-weight: 600;
@@ -110,7 +118,7 @@ main {
     padding: 4%;
     border: 2px solid #000;
     border-radius: 5px;
-    font-size: clamp(8px, 5vw, 1rem);
+    font-size: clamp(6px, 3vw, 1rem);
     font-weight: 600;
     color: #fff;
     background: #444;
@@ -139,7 +147,8 @@ main {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 1.2rem;
 }
-.shiny::before {  /* efeito brilho botão */
+/* efeito brilho botão */
+.shiny::before {
     content: '';
     position: absolute;
     top: 0;
@@ -152,4 +161,100 @@ main {
 }
 .shiny:active::before {
     transform: skewX(45deg) translateX(-150px);
+}
+
+@media (max-width: 700px) {
+    .botton {
+        padding: 3%;
+        font-weight: 500;
+    }
+    .box2 {
+        right: 16.2%;
+        top: 52%;
+    }
+    .shiny {
+        transform: translate(2%, -9%);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .shiny:active {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .pokedex {
+        display: none;
+    }
+    .pokedex2 {
+        display: block;
+    }
+    .fundo {
+        top: 27.2%;
+        left: 16.5%;
+        width: 58%;
+        height: 26.5%;
+    }
+    .shiny {
+        bottom: 18.3%;
+        left: 35%;
+        width: 25%;
+        height: 7%;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .shiny:active {
+        font-size: 0.95rem;
+        box-shadow: inset -3px 3px 0 #222;
+    }
+    .pokemon_img, .pokemon_img2 {
+        left: 50%;
+        bottom: 50.5%;
+    }
+    .pokemon_data {
+        position: absolute;
+        font-weight: 600;
+        color: #aaa;
+        right: 5%;
+        top: 20.5%;
+        font-size: clamp(8px, 5vw, 20px);
+    }
+
+    .pokemon_name {
+        color: #3a444d;
+    }
+    .form {
+        width: 64%;
+        top: 65%;
+        left: 16.5%;
+    }
+    .bottons {
+        bottom: 10%;
+        left: 52.5%;
+        width: 64%;
+    }
+    .botton {
+        padding: 4%;
+        font-size: clamp(8px, 5vw, 1rem);
+        font-weight: 600;
+    }
+    .botton:active {
+        box-shadow: inset -3px 3px 0 #222;
+    }
+    .box {
+        position: absolute;
+        width: 72%;
+        height: 7%;
+        right: 20%;
+        top: 54%;
+    }
+    .box2 {
+        width: 20%;
+        height: 10%;
+        font-weight: 500;
+        right: 19.5%;
+        top: 11%;
+        border-radius: 7px;
+        gap: 0;
+    }
 }
