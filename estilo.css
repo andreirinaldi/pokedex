@@ -183,6 +183,9 @@ main {
 }
 
 @media (max-width: 600px) {
+    main {
+        margin-top: 25%;
+    }
     .pokedex {
         display: none;
     }
